@@ -8,8 +8,8 @@ environment {
 	    uselocalCredentials = true
 	     sentinelURL = 'https://sentinel.whitehatsec.com'
 	     apiKey = '4acad838-32d4-4b3c-a6b0-83a19c73139b'
-	     app = 12592
-	     codebase = 17647
+	     app = "12592"
+	     codebase = "17647"
 	     triggerScan = true
 	     site = '0'
 	     fileTypeSelected = 'ARCHIVE'
