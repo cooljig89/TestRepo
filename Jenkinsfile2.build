@@ -17,7 +17,7 @@ environment {
 	    boolean archiveSelected = true
 	    String uploadFileSize = '1024'
 	    String excludeFileType = '**/*.jpg,**/*.txt,**/*.doc,**/*.docx,**/*.gif,**/*.png,**/*.log'
-	    String includeFileType = ''
+	    String includeFileType = '*.'
 	    boolean delArcUploadSFTP= true
 	    String archiveName = 'upload'
 	    String applianceIP = '172.31.82.55'
