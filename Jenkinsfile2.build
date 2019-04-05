@@ -4,7 +4,6 @@ pipeline {
     }
 
 environment {
-	    echo 'Launching WhiteHat plugin'
 	    String whsplugin = 'hudson.plugins.ui.UiPublisher'
 	    uselocalCredentials = true
 	    String sentinelURL = "https://sentinel.whitehatsec.com"
@@ -20,7 +19,7 @@ environment {
 	    String excludeFileType = '**/*.jpg,**/*.txt,**/*.doc,**/*.docx,**/*.gif,**/*.png,**/*.log'
 	    String includeFileType = ''
 	    boolean delArcUploadSFTP= true
-	    String archiveName = upload
+	    String archiveName = "upload"
 	    String applianceIP = "172.31.82.55"
 	    boolean delArcUploadAppliance = true
 	  }
