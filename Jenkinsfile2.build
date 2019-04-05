@@ -6,12 +6,12 @@ pipeline {
 environment {
 	    String whsplugin = 'hudson.plugins.ui.UiPublisher'
 	    uselocalCredentials = true
-	    String sentinelURL = "https://sentinel.whitehatsec.com"
-	    String apiKey = "4acad838-32d4-4b3c-a6b0-83a19c73139b"
+	    String sentinelURL = 'https://sentinel.whitehatsec.com'
+	    String apiKey = '4acad838-32d4-4b3c-a6b0-83a19c73139b'
 	    String app = 12592
 	    String codebase = 17647
 	    boolean triggerScan = true
-	    String site = "0"
+	    String site = '0'
 	    String fileTypeSelected = 'ARCHIVE'
 	    String archiveMethodSelected = 'APPLIANCE'
 	    boolean archiveSelected = true
@@ -19,8 +19,8 @@ environment {
 	    String excludeFileType = '**/*.jpg,**/*.txt,**/*.doc,**/*.docx,**/*.gif,**/*.png,**/*.log'
 	    String includeFileType = ''
 	    boolean delArcUploadSFTP= true
-	    String archiveName = "upload"
-	    String applianceIP = "172.31.82.55"
+	    String archiveName = 'upload'
+	    String applianceIP = '172.31.82.55'
 	    boolean delArcUploadAppliance = true
 	  }
     stages {
