@@ -4,24 +4,24 @@ pipeline {
     }
 
 environment {
-	    String whsplugin = 'hudson.plugins.ui.UiPublisher'
+	     whsplugin = 'hudson.plugins.ui.UiPublisher'
 	    uselocalCredentials = true
-	    String sentinelURL = 'https://sentinel.whitehatsec.com'
-	    String apiKey = '4acad838-32d4-4b3c-a6b0-83a19c73139b'
-	    String app = 12592
-	    String codebase = 17647
-	    boolean triggerScan = true
-	    String site = '0'
-	    String fileTypeSelected = 'ARCHIVE'
-	    String archiveMethodSelected = 'APPLIANCE'
-	    boolean archiveSelected = true
-	    String uploadFileSize = '1024'
-	    String excludeFileType = '**/*.jpg,**/*.txt,**/*.doc,**/*.docx,**/*.gif,**/*.png,**/*.log'
-	    String includeFileType = '*.'
-	    boolean delArcUploadSFTP= true
-	    String archiveName = 'upload'
-	    String applianceIP = '172.31.82.55'
-	    boolean delArcUploadAppliance = true
+	     sentinelURL = 'https://sentinel.whitehatsec.com'
+	     apiKey = '4acad838-32d4-4b3c-a6b0-83a19c73139b'
+	     app = 12592
+	     codebase = 17647
+	     triggerScan = true
+	     site = '0'
+	     fileTypeSelected = 'ARCHIVE'
+	     archiveMethodSelected = 'APPLIANCE'
+	     archiveSelected = true
+	     uploadFileSize = '1024'
+	     excludeFileType = '**/*.jpg,**/*.txt,**/*.doc,**/*.docx,**/*.gif,**/*.png,**/*.log'
+	     includeFileType = '*.'
+	     delArcUploadSFTP= true
+	     archiveName = 'upload'
+	     applianceIP = '172.31.82.55'
+	     delArcUploadAppliance = true
 	  }
     stages {
         stage("build") {
