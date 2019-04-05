@@ -12,7 +12,7 @@ pipeline {
         site = "0"
         fileTypeSelected = "ARCHIVE"
         archiveMethodSelected = "APPLIANCE"
-        archiveSelected = false
+        archiveSelected = true
         uploadFileSize = "1024"
         excludeFileType = "**/*.jpg,**/*.txt,**/*.doc,**/*.docx,**/*.gif,**/*.png,**/*.log"
         includeFileType = "*"
