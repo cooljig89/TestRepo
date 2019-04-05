@@ -1,0 +1,55 @@
+pipeline {
+    agent {
+        label "ci-slave32"
+    }
+    environment {
+        whsplugin = 'hudson.plugins.ui.UiPublisher'
+        uselocalCredentials = true
+        sentinelURL = "https://sentinel.whitehatsec.com"
+        apiKey = "4acad838-32d4-4b3c-a6b0-83a19c73139b"
+        app = "9066"
+        triggerScan = true
+        site = "0"
+        fileTypeSelected = 'ARCHIVE'
+        archiveMethodSelected = 'APPLIANCE'
+        archiveSelected = false
+        uploadFileSize = '1024'
+        excludeFileType = '**/*.jpg,**/*.txt,**/*.doc,**/*.docx,**/*.gif,**/*.png,**/*.log'
+        includeFileType = ''
+        codebase ='0'
+        //applianceIP = "192.168.181.236"
+        delArcUploadSFTP= true
+        delArcUploadAppliance = true
+        archiveName = "WebgoatArchive"
+    }
+
+    stages {
+        stage("build") {
+            steps {
+                sh  "java -version"
+            }
+        }
+        stage("Call WH Plugin") {
+            steps {
+                step([
+                        $class: whsplugin,
+                        uselocalCredentials: uselocalCredentials,
+                        sentinelURL: sentinelURL,
+                        apiKey: apiKey,
+                        site: site,
+                        app: app,
+                        codebase: codebase,
+                        archiveMethodSelected: archiveMethodSelected,
+                        fileTypeSelected: fileTypeSelected,
+                        archiveSelected: archiveSelected,
+                        uploadFileSize: uploadFileSize,
+                        excludeFileType: excludeFileType,
+                        delArcUploadAppliance: delArcUploadAppliance,
+                        archiveName: archiveName,
+                        triggerScan: triggerScan
+                ])
+            }
+        }
+    }
+}
+
